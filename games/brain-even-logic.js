@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
 
@@ -16,22 +15,23 @@ const evenGame = (name = 'User') => {
 
         let answer = readlineSync.question('Your answer: ')
 
+        answer = answer.toLocaleLowerCase();
          
 
         if (number % 2 === 0) {
-             if (answer.toLowerCase() === 'yes' || answer.toLowerCase() === 'y') { 
+             if (answer === 'yes' || answer === 'y') { 
                 console.log('Correct!'); 
                 count += 1;
-            } else if (answer.toLowerCase() === 'no' || answer.toLowerCase() === 'n') {
+            } else if (answer === 'no' || answer === 'n') {
                 return console.log(`'no' is wrong answer (Correct answer was 'yes'. Let's try again, ${name}!)`)
             } else {
                 return console.log(`This answer incorrect!(Only 'Yes' or 'No') Let's try again ${name}!`);
             }
         } else {
-            if (answer.toLowerCase() === 'no' || answer.toLowerCase() === 'n') { 
+            if (answer === 'no' || answer === 'n') { 
                 console.log('Correct!'); 
                 count += 1;
-            } else if (answer.toLowerCase() === 'yes' || answer.toLowerCase() === 'y') {
+            } else if (answer === 'yes' || answer === 'y') {
                 return console.log(`'yes' is wrong answer (Correct answer was 'no'. Let's try again, ${name}!)`)
             } else {
                 return console.log(`This answer incorrect!(Only 'Yes' or 'No') Let's try again ${name}!`);
