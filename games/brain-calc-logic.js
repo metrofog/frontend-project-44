@@ -19,14 +19,18 @@ const calcGame = (name = 'User') => {
             getQwestion(`${firstNumber} ${operatorArr[index]} ${secondNumber}`);
             
             let answer = getAnswer();
-            if (answerLogic(answer, correctAnswer, name)) count += 1;
+            if (answerLogic(answer, correctAnswer, name)) {
+                count += 1;
+            } else break;
         } else if (index === 1) {
             let correctAnswer = firstNumber - secondNumber;
 
             getQwestion(`${firstNumber} ${operatorArr[index]} ${secondNumber}`);
             
             let answer = getAnswer();
-            if (answerLogic(answer, correctAnswer, name)) count += 1;
+            if (answerLogic(answer, correctAnswer, name)) {
+                count += 1;
+            } else break;
         } else if (index === 2) {
             firstNumber = Math.round(Math.random() * 15);
             secondNumber = Math.round(Math.random() * 15);
