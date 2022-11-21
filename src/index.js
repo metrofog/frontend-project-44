@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 
 export const answerLogic = (answer, correctAnswer, name) => {
 
-    if (Number(answer) === correctAnswer) {
+    if (answer === correctAnswer) {
         console.log('Correct!');
         return true;
     } else {
@@ -11,7 +11,20 @@ export const answerLogic = (answer, correctAnswer, name) => {
         return false;
     }
 };
-    
+
+export const YesOrNoLogic = (answer, correctAnswer, name) => {
+    const yesArr = ['yes', 'y'];
+    const noArr = ['no', 'n'];
+    if (yesArr.includes(answer) === correctAnswer) { 
+        return true;
+    } else if (noArr.includes(answer) === correctAnswer) {
+        return false;
+    } else {
+        console.log(`This answer incorrect!(Only 'Yes' or 'No') Let's try again ${name}!`);
+        return false;
+    }
+};
+
 export const sayHello = () => {
     console.log('Welcome to the Brain Games!');
     const name = sayUName();
@@ -68,3 +81,8 @@ export const getProgression = () => {
     }
     return [progression, answerNumber];
 };
+
+export const primeNumberCheck = (number) => {
+    const primeArr = [1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
+    return primeArr.includes(number);
+}
