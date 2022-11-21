@@ -1,12 +1,5 @@
 #!/usr/bin/env node
 
-import sayUName from '../src/cli.js'
+import { welcomeUser } from "../games/brain-games-logic.js";
 
-const sayHello = () => {
-
-    console.log('Welcome to the Brain Games!');
-    const name = sayUName();
-    return name;
-
-};
-export default sayHello;
+welcomeUser();

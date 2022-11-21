@@ -1,6 +1,6 @@
 
 
-import { answerLogic, getRandomNumber, getQwestion,
+import { answerLogic, getRandomNumber, getQuestion,
          getAnswer, getCongratulation } from '../src/index.js';
 
 const calcGame = (name = 'User') => {
@@ -16,7 +16,7 @@ const calcGame = (name = 'User') => {
         if (index === 0) {
             let correctAnswer = firstNumber + secondNumber;
 
-            getQwestion(`${firstNumber} ${operatorArr[index]} ${secondNumber}`);
+            getQuestion(`${firstNumber} ${operatorArr[index]} ${secondNumber}`);
             
             let answer = getAnswer();
             if (answerLogic(answer, correctAnswer, name)) {
@@ -25,7 +25,7 @@ const calcGame = (name = 'User') => {
         } else if (index === 1) {
             let correctAnswer = firstNumber - secondNumber;
 
-            getQwestion(`${firstNumber} ${operatorArr[index]} ${secondNumber}`);
+            getQuestion(`${firstNumber} ${operatorArr[index]} ${secondNumber}`);
             
             let answer = getAnswer();
             if (answerLogic(answer, correctAnswer, name)) {
@@ -36,7 +36,7 @@ const calcGame = (name = 'User') => {
             secondNumber = Math.round(Math.random() * 15);
             let correctAnswer = firstNumber * secondNumber;
             
-            getQwestion(`${firstNumber} ${operatorArr[index]} ${secondNumber}`);
+            getQuestion(`${firstNumber} ${operatorArr[index]} ${secondNumber}`);
             
             let answer = getAnswer();
             if (answerLogic(answer, correctAnswer, name)) {

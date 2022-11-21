@@ -1,5 +1,5 @@
 
-import readlineSync from 'readline-sync';
+import { getAnswer, getCongratulation, getQuestion, getRandomNumber } from '../src/index.js';
 
 
 const evenGame = (name = 'User') => {
@@ -10,10 +10,10 @@ const evenGame = (name = 'User') => {
 
     while (count < 3) {
 
-        let number = Math.round(Math.random() * 100);
-        console.log(`Question: ${number}`);
+        let number = getRandomNumber();
+        getQuestion(`${number}`)
 
-        let answer = readlineSync.question('Your answer: ')
+        let answer = getAnswer()
 
         answer = answer.toLocaleLowerCase();
          
@@ -37,7 +37,7 @@ const evenGame = (name = 'User') => {
                 return console.log(`This answer incorrect!(Only 'Yes' or 'No') Let's try again ${name}!`);
             }
         }
-        if (count === 3) return console.log(`Congratulations, ${name}!`)
+        getCongratulation(count, name);
     };
 };
 
