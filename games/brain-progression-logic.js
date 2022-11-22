@@ -19,7 +19,7 @@ const progressionGame = (name = 'User') => {
       count += 1;
     } else break;
   }
-  getCongratulation(name);
+  getCongratulation(count, name);
 };
 
 export default progressionGame;
