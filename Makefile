@@ -21,3 +21,6 @@ brain-progression:
 
 brain-prime:
 	node bin/prime.js
+
+lint:
+	npx eslint .

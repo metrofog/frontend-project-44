@@ -1,7 +1,9 @@
-import sayUName from "../src/cli.js";
+import sayUName from '../src/cli.js';
 
-export const welcomeUser = () => {
-    console.log('Welcom to the Brain Games!');
-    let name = sayUName();
-    return name;
-}
+const welcomeUser = () => {
+  console.log('Welcom to the Brain Games!');
+  const name = sayUName();
+  return name;
+};
+
+export default welcomeUser;
