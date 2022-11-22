@@ -45,7 +45,7 @@ export const getQuestion = (text) => {
 export const getAnswer = () => readlineSync.question('Your answer: ');
 
 export const getCongratulation = (count, name) => {
-  if (count === 3) console.log(`Congratulations, ${name}`);
+  if (count === 3) console.log(`Congratulations, ${name}!`);
 };
 
 export const gcdLogic = (firstNumber, secondNumber) => {
