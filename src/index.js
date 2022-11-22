@@ -23,7 +23,7 @@ export const YesOrNoLogic = (answer, correctAnswer, name) => {
     console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'. Let's try again, ${name}!`);
     return false;
   }
-  console.log(`This answer incorrect!(Only 'Yes' or 'No') Let's try again ${name}!`);
+  console.log(`This answer incorrect!(Only 'yes' or 'no') Let's try again ${name}!`);
   return false;
 };
 

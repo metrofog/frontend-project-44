@@ -8,7 +8,7 @@ import {
 
 const evenGame = (name = 'User') => {
   let count = 0;
-  console.log('Answer "Yes" if the number is even, otherwise answer "No".');
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
   while (count < 3) {
     const number = getRandomNumber();
     getQuestion(`${number}`);
