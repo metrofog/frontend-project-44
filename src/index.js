@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import sayUName from './cli.js';
 
 export const answerLogic = (answer, correctAnswer, name) => {
+  correctAnswer = `${correctAnswer}`;
   if (answer === correctAnswer) {
     console.log('Correct!');
     return true;
