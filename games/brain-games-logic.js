@@ -1,7 +1,7 @@
 import sayUName from '../src/cli.js';
 
 const welcomeUser = () => {
-  console.log('Welcom to the Brain Games!');
+  console.log('Welcome to the Brain Games!');
   const name = sayUName();
   return name;
 };
