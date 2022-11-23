@@ -2,8 +2,8 @@ import readlineSync from 'readline-sync';
 import sayUName from './cli.js';
 
 export const answerLogic = (answer, correctAnswer, name) => {
-  correctAnswer = `${correctAnswer}`;
-  if (answer === correctAnswer) {
+  const correctAns = `${correctAnswer}`;
+  if (answer === correctAns) {
     console.log('Correct!');
     return true;
   }
@@ -66,7 +66,7 @@ export const getProgression = () => {
   const minLength = 5;
   const progressionLength = Math.round(Math.random() * (maxLength - minLength) + minLength);
   const randomIndex = Math.round(Math.random() * (progressionLength - 2) + 1);
-  console.log(progressionLength, randomIndex)
+  console.log(progressionLength, randomIndex);
   const randomStep = Math.round(Math.random() * 9 + 1);
   let randomNumber = Math.round(Math.random() * 50);
   let progression = `${randomNumber}`;
