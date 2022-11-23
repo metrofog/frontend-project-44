@@ -68,7 +68,7 @@ export const getProgression = () => {
   const randomIndex = Math.round(Math.random() * (progressionLength - 1));
   const randomStep = Math.round(Math.random() * 9 + 1);
   let randomNumber = Math.round(Math.random() * 50);
-  let progression;
+  let progression = '';
   let answerNumber;
   for (let i = 0; i < progressionLength; i += 1) {
     if (i !== randomIndex) {
