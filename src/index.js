@@ -63,12 +63,12 @@ export const gcdLogic = (firstNumber, secondNumber) => {
 
 export const getProgression = () => {
   const progressionLength = Math.round(Math.random() * (5) + 5);
-  const randomIndex = Math.round(Math.random() * progressionLength);
+  const randomIndex = Math.round(Math.random() * progressionLength - 1);
   const randomStep = Math.round(Math.random() * 9 + 1);
   let randomNumber = Math.round(Math.random() * 50);
   let progression = `${randomNumber}`;
-  let answerNumber = 0;
-  for (let i = 0; i < progressionLength; i += 1) {
+  let answerNumber;
+  for (let i = 0; i < progressionLength - 1; i += 1) {
     if (i !== randomIndex) {
       progression = `${progression} ${randomNumber += randomStep}`;
     } else {
