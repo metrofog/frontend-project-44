@@ -65,12 +65,13 @@ export const getProgression = () => {
   const maxLength = 10;
   const minLength = 5;
   const progressionLength = Math.round(Math.random() * (maxLength - minLength) + minLength);
-  const randomIndex = Math.round(Math.random() * (progressionLength - 1));
+  const randomIndex = Math.round(Math.random() * (progressionLength - 2) + 1);
+  console.log(progressionLength, randomIndex)
   const randomStep = Math.round(Math.random() * 9 + 1);
   let randomNumber = Math.round(Math.random() * 50);
-  let progression = '';
+  let progression = `${randomNumber}`;
   let answerNumber;
-  for (let i = 0; i < progressionLength; i += 1) {
+  for (let i = 1; i < progressionLength; i += 1) {
     if (i !== randomIndex) {
       progression = `${progression} ${randomNumber += randomStep}`;
     } else {
