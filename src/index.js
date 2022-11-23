@@ -65,9 +65,7 @@ export const getProgression = () => {
   const maxLength = 10;
   const minLength = 5;
   const progressionLength = Math.round(Math.random() * (maxLength - minLength) + minLength);
-  console.log(progressionLength)
   const randomIndex = Math.round(Math.random() * progressionLength - 1);
-  console.log(randomIndex)
   const randomStep = Math.round(Math.random() * 9 + 1);
   let randomNumber = Math.round(Math.random() * 50);
   let progression;
